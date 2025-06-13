@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ติดต่อเรา | ChunGroups.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Kanit', sans-serif;
+    }
+
+    body {
+      background-color: #f3f4f6;
+      color: #333;
+    }
+
+    header {
+      background-color: #1b3d2f;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #cce3d1;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    form button {
+      margin-top: 1.5rem;
+      background-color: #4caf50;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1b3d2f;
+      color: #cce3d1;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>ChunGroups</h2>
+  <nav>
+    <a href="NewIndex.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="News_and_Update.html">ข่าวสาร</a>
+    <a href="Work_with_Chun.html">ร่วมงานกับเรา</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h1>ติดต่อ ChunGroups</h1>
+
+  <form id="contactForm">
+    <label for="name">ชื่อของคุณ</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">อีเมล</label>
+    <input type="email" id="email" name="email">
+
+    <label for="company">เลือกบริษัทที่ต้องการติดต่อ</label>
+    <select id="company" name="company" required>
+      <option value="">-- กรุณาเลือกบริษัท --</option>
+      <option value="ชุณห์กิจพัฒนา">บริษัทชุณห์กิจพัฒนา จำกัด</option>
+      <option value="ชุณห์กิจคอนสตรัคชั่น ซัพพลาย">บริษัทชุณห์กิจคอนสตรัคชั่น ซัพพลาย จำกัด</option>
+      <option value="ชุณห์ไฟว์ฟลอริชส์">บริษัทชุณห์ไฟว์ฟลอริชส์ จำกัด</option>
+      <option value="ชุณห์กิจ อะหลั่ย">บริษัทชุณห์กิจ อะหลั่ย จำกัด</option>
+      <option value="ชุณห์สมายล์โลจิสติกส์">บริษัทชุณห์สมายล์โลจิสติกส์ จำกัด</option>
+      <option value="ห้างทองนริศรา">ห้างทองนริศรา</option>
+    </select>
+
+    <div id="regionContainer" style="display:none;">
+      <label for="region">เลือกภูมิภาค</label>
+      <select id="region" name="region">
+        <option value="">-- กรุณาเลือกภูมิภาค --</option>
+        <option value="ภาคกลาง">ภาคกลาง</option>
+        <option value="ภาคเหนือ">ภาคเหนือ</option>
+      </select>
+    </div>
+
+    <div id="branchCentralContainer" style="display:none;">
+      <label for="branchCentral">เลือกสาขา (ภาคกลาง)</label>
+      <select id="branchCentral" name="branchCentral">
+        <option value="">-- กรุณาเลือกสาขา --</option>
+        <option value="สาขานครหลวง จังหวัดอยุธยา">สาขานครหลวง จังหวัดอยุธยา</option>
+        <option value="สาขาอุทัย จังหวัดอยุธยา">สาขาอุทัย จังหวัดอยุธยา</option>
+        <option value="สาขาแก่งคอย จังหวัดสระบุรี">สาขาแก่งคอย จังหวัดสระบุรี</option>
+        <option value="สาขาภาชี จังหวัดสระบุรี">สาขาภาชี จังหวัดสระบุรี</option>
+      </select>
+    </div>
+
+    <div id="branchNorthContainer" style="display:none;">
+      <label for="branchNorth">เลือกสาขา (ภาคเหนือ)</label>
+      <select id="branchNorth" name="branchNorth">
+        <option value="">-- กรุณาเลือกสาขา --</option>
+        <option value="สาขาเมืองเชียงใหม่ จังหวัดเชียงใหม่">สาขาเมืองเชียงใหม่ จังหวัดเชียงใหม่</option>
+        <option value="สาขาแม่สอด จังหวัดตาก">สาขาแม่สอด จังหวัดตาก</option>
+        <option value="สาขาลำปาง จังหวัดลำปาง">สาขาลำปาง จังหวัดลำปาง</option>
+        <option value="สาขาเชียงราย จังหวัดเชียงราย">สาขาเชียงราย จังหวัดเชียงราย</option>
+      </select>
+    </div>
+
+    <button type="submit">ส่งข้อความ</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 ChunGroups Co., Ltd. สงวนลิขสิทธิ์ทั้งหมด
+</footer>
+
+<script>
+  const companySelect = document.getElementById("company");
+  const regionContainer = document.getElementById("regionContainer");
+  const regionSelect = document.getElementById("region");
+  const branchCentralContainer = document.getElementById("branchCentralContainer");
+  const branchNorthContainer = document.getElementById("branchNorthContainer");
+
+  companySelect.addEventListener("change", () => {
+    const selected = companySelect.value;
+    const isGoldShop = selected === "ห้างทองนริศรา";
+    regionContainer.style.display = isGoldShop ? "block" : "none";
+    branchCentralContainer.style.display = "none";
+    branchNorthContainer.style.display = "none";
+  });
+
+  regionSelect.addEventListener("change", () => {
+    branchCentralContainer.style.display = regionSelect.value === "ภาคกลาง" ? "block" : "none";
+    branchNorthContainer.style.display = regionSelect.value === "ภาคเหนือ" ? "block" : "none";
+  });
+
+  const contactData = {
+    "ชุณห์กิจพัฒนา": "โทร: 036-111-1111<br>อีเมล: dev@chun1.com",
+    "ชุณห์กิจคอนสตรัคชั่น ซัพพลาย": "โทร: 036-222-2222<br>อีเมล: supply@chun2.com",
+    "ชุณห์ไฟว์ฟลอริชส์": "โทร: 036-333-3333<br>อีเมล: five@chun3.com",
+    "ชุณห์กิจ อะหลั่ย": "โทร: 036-444-4444<br>อีเมล: part@chun4.com",
+    "ชุณห์สมายล์โลจิสติกส์": "โทร: 036-555-5555<br>อีเมล: logistic@chun5.com",
+    "ห้างทองนริศรา": "โทร: 036-666-6666<br>อีเมล: narisara.gold@hotmail.com"
+  };
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const company = companySelect.value;
+    let message = contactData[company] || "ไม่พบข้อมูลติดต่อ";
+
+    if (company === "ห้างทองนริศรา") {
+      const region = regionSelect.value;
+      let branch = "";
+      if (region === "ภาคกลาง") {
+        branch = document.getElementById("branchCentral").value;
+      } else if (region === "ภาคเหนือ") {
+        branch = document.getElementById("branchNorth").value;
+      }
+      if (branch) {
+        message += `<br>สาขา: ${branch}`;
+      }
+    }
+
+    Swal.fire({
+      icon: 'info',
+      title: 'ข้อมูลติดต่อ',
+      html: message,
+      confirmButtonText: 'ตกลง',
+      confirmButtonColor: '#4caf50'
+    });
+  });
+</script>
+
+</body>
+</html>
+
